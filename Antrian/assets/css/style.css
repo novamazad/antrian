@@ -1,0 +1,123 @@
+/* assets/css/style.css */
+
+/* Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Palet Warna & Variabel */
+:root {
+    --primary-color: #1A5F7A;
+    --secondary-color: #57C5B6;
+    --light-color: #F8F9FA;
+    --dark-color: #343A40;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* Tampilan Kartu (Card) */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Tombol (Button) */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #154c63;
+    border-color: #154c63;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Navbar Admin */
+.admin-nav {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-nav .navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.admin-nav .nav-link {
+    color: #6c757d;
+}
+
+.admin-nav .nav-link.active,
+.admin-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    padding-bottom: 2rem;
+}
+
+.footer-ticker {
+    background-color: var(--dark-color);
+    color: white;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: auto;
+}
+
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker-animation 25s linear infinite;
+    font-size: 0.9rem;
+}
+
+.ticker-content i {
+    margin-right: 0.5rem;
+}
+
+@keyframes ticker-animation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
